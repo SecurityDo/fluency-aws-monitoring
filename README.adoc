@@ -4,8 +4,10 @@
 ** setup aws accountID, region and external ID
 * terraform apply
 ** output
+```
 MetricBucket = "fluency-awsmonitoring-12345678-us-east-1-vmrkga"
 MetricQueueURL = "https://sqs.us-east-1.amazonaws.com/12345678/fluency_awsmonitoring_s3notify_vmrkga"
+```
 * terraform destroy (remove all assocated AWS resources)
 
 

@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "regionConfig" {
-  source           = "./modules/region_config"
+  source           = "../modules/region_config"
   region     = var.region
   accountID = var.accountID
   role = var.role

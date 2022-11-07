@@ -62,7 +62,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 
 
 resource "aws_iam_policy" "metric_bucket_read_policy" {
-  name = "fluency_awsmonitoring_bucket_${random_string.random.result}"
+  name = "fluency_metricstream_read_${var.accountID}-${var.region}"
   policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -150,7 +150,7 @@ resource "aws_iam_role" "FluencyMetricStreamRole" {
         {
           Action   = ["firehose:PutRecord", "firehose:PutRecordBatch"]
           Effect   = "Allow"
-          Resource = aws_kinesis_firehose_delivery_stream.arn
+          Resource = aws_kinesis_firehose_delivery_stream.extended_s3_stream.arn
         }
       ]
     })

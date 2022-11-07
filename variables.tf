@@ -4,7 +4,7 @@ variable "accountID" {
 }
 
 variable "region" {
-  description = "AWS regions"
+  description = "AWS region"
 }
 
 variable "role" {

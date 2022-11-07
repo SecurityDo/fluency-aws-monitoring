@@ -1,15 +1,15 @@
 
 variable "accountID" {
-  description = "993024041442"
+  description = "provider's AWS accountID"
 }
 
 variable "region" {
-  description = "us-east-2"
+  description = "AWS Region"
 }
 
 variable "role" {
   description = "IAM role name"
-  default = "fluency-aws-monitoring-v3"
+  default = "fluency-aws-monitoring"
 }
 
 variable "expireDays" {

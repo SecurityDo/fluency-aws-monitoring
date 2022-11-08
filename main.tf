@@ -87,7 +87,7 @@ resource "aws_iam_policy" "FluencyPolicyR" {
         "es:DescribeElasticsearchDomain",
         "es:ListDomainNames",
         "firehose:DescribeDeliveryStream",
-        "firehose:ListDeliveryStream",
+        "firehose:ListDeliveryStreams",
         "kinesis:DescribeStream",
         "kinesis:ListShards",
         "kinesis:ListStreams",

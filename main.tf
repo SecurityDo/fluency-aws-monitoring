@@ -107,7 +107,6 @@ resource "aws_iam_policy" "FluencyPolicyR" {
         "s3:GetBucketTagging",
         "s3:ListAllMyBuckets",
         "s3:ListBucket",
-        "s3:GetBucketNotificationConfiguration",
         "sqs:GetQueueAttributes",
         "sqs:GetQueueUrl",
         "sqs:ListQueues",

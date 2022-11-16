@@ -63,7 +63,7 @@ resource "aws_iam_policy" "metric_bucket_read_policy" {
     {
       "Sid": "metricS3Read",
       "Effect": "Allow",
-      "Resource": "${aws_s3_bucket.metricbucket.arn}",
+      "Resource": "${aws_s3_bucket.metricbucket.arn}/*",
       "Action": ["s3:GetObject"]
     },
     {

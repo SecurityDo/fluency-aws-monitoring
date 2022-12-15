@@ -88,6 +88,7 @@ resource "aws_iam_policy" "FluencyPolicyR" {
         "es:ListDomainNames",
         "firehose:DescribeDeliveryStream",
         "firehose:ListDeliveryStreams",
+        "health:Describe*",
         "kinesis:DescribeStream",
         "kinesis:ListShards",
         "kinesis:ListStreams",

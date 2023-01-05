@@ -12,9 +12,9 @@ variable "role" {
   default = "fluency-aws-monitoring"
 }
 
-variable "expireDays" {
-  default = 14
-}
+// variable "expireDays" {
+//   default = 14
+// }
 
 variable "externalID" {
   description = "external ID for role fluency-aws-monitoring"

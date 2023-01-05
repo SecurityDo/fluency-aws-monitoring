@@ -115,6 +115,8 @@ resource "aws_iam_policy" "FluencyPolicyR" {
         "states:ListActivities",
         "states:ListStateMachines",
         "tag:GetResources",
+        "tag:GetTagKeys",
+        "tag:GetTagValues",
         "workspaces:DescribeWorkspaces"
       ]
     }
@@ -152,7 +154,7 @@ resource "aws_iam_role" "assume_role" {
 POLICY
 }
 
-
+/*
 module "regionConfig" {
   source           = "./modules/region_config"
   region     = var.region
@@ -160,3 +162,4 @@ module "regionConfig" {
   role = aws_iam_role.assume_role.name
   expireDays = var.expireDays
 }
+*/

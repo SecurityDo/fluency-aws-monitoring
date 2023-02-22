@@ -20,3 +20,8 @@ variable "externalID" {
   description = "external ID for role fluency-aws-monitoring"
 }
 
+variable "aws_type" {
+  description = "aws cloud type"
+  default = "aws"
+  // or "aws-us-gov"
+}

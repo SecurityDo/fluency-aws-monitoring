@@ -3,6 +3,12 @@ provider "aws" {
 }
 
 
+locals {
+
+  fluencyaccount = var.aws_type == "aws" ? "993024041442" : "024776754335"
+
+}
+
 resource "aws_iam_policy" "FluencyPolicyR" {
   name = "fluency_aws_monitoring"
   policy = <<POLICY
@@ -12,7 +18,7 @@ resource "aws_iam_policy" "FluencyPolicyR" {
     {
       "Sid": "passRole",
       "Effect": "Allow",
-      "Resource": "arn:aws:iam::*:role/fluency_metricstream_*",
+      "Resource": "arn:${var.aws_type}:iam::*:role/fluency_metricstream_*",
       "Action": [
         "iam:PassRole" 
       ]
@@ -140,7 +146,7 @@ resource "aws_iam_role" "assume_role" {
         {
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::993024041442:root"
+                "AWS": "arn:${var.aws_type}:iam::${local.fluencyaccount}:root"
             },
             "Action": "sts:AssumeRole",
             "Condition": {

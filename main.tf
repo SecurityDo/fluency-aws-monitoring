@@ -5,7 +5,7 @@ provider "aws" {
 
 locals {
 
-  fluencyaccount = var.aws_type == "aws" ? "993024041442" : "024776754335"
+  fluencyaccount = var.aws_type == "aws" ? "${var.fluencyAccountID}" : "024776754335"
 
 }
 

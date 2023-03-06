@@ -12,9 +12,10 @@ variable "role" {
   default = "fluency-aws-monitoring"
 }
 
-// variable "expireDays" {
-//   default = 14
-// }
+variable "fluencyAccountID" {
+  description = "Fluency AWS AccountID"
+  default = "162820009300"
+}
 
 variable "externalID" {
   description = "external ID for role fluency-aws-monitoring"
